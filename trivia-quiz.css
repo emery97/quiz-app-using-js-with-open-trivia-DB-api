@@ -20,34 +20,36 @@ body{
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     color: var(--dark-color);
-    background: var(--grey-color);
+}
+.quiz-container{
+    min-height:900px;
 }
 .wrapper{
     background: var(--light-color);
+    background-color: #FCF5C7;
     padding: 1.5rem 4rem 3rem 4rem;
     width: 600px;
-    height: 680px;
-    border-top-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
+    min-height: 800px;
     position: relative;
+    border-radius: 10%;
     box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);
 }
 .quiz-title{
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 .quiz-score{
+    overflow-y: hidden;
     text-align: right;
     font-weight: 600;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    border: 5px solid var(--grey-color);
     font-weight: bold;
     width: 100px;
-    height: 50px;
     margin: .5rem auto 1rem auto;
     color: var(--light-purple-color);
 }
+
 .quiz-question{
     font-size: 1.2rem;
     text-align: center;

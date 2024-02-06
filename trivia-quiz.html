@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICON LINK-->
+    <script src="https://kit.fontawesome.com/85b6a0f764.js" crossorigin="anonymous"></script>
+    <!--CSS SPECIFICALLY FOR TRIVIA QUIZ-->
+    <link rel = "stylesheet" href = "trivia-quiz/trivia-quiz.css">
+    <!--MAIN CSS-->
+    <link rel = "stylesheet" href = "../stylesheet.css" type = "text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+
+    <title>Trivia Quiz</title>
+    <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="image/index/faviconx.ico">
+</head>
+<body>
+    <div class = "promotion-bar">
+        <p>FREE SHIPPING ON ORDERS OVER $50</p>
+    </div>
+    
+    <div class="top-left-container">
+        <span id="welcome-message"></span>
+    </div>
+
+    <div class="top-nav">
+        <a href="../index.html" class="brand-name">
+            <h2> AMELIAXWEIYING </h2>
+        </a>
+        <div class="top-nav-icons">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="SEARCH">
+                    <button class="search-button">
+                        <i class="fas fa-search" style="font-size: 22px; background: none; border: none; padding: 5px 10px; cursor: pointer; outline: none; background-color: transparent; color: #000000;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <a href="../login2.html" class="icon-link">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="../cart.html" class="icon-link">
+                <i class="fas fa-shopping-basket"></i>
+            </a>
+            <a href="../all-games.html" class="icon-link">
+                <i class="fa-solid fa-gamepad" style="color: #0d0d0d;"></i>
+            </a>
+        </div>
+    </div>    
+    <div class="navbar">
+        <a href="../new-products.html">NEW</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                TOPS
+            </button>
+            <div class="dropdown-content">
+                <a href="../croptop.html">Crop Tops</a>
+                <a href="../strapless&tank.html">Tanks & Strapless Tops</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                DRESSES
+            </button>
+            <div class="dropdown-content">
+                <a href="../midi-dress.html">Midi Dresses</a>
+                <a href="../strapless-dress.html">Strapless Dresses</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                SKIRTS
+            </button>
+            <div class="dropdown-content">
+                <a href="../denim-skirts.html">Denim Skirts</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                JEANS
+            </button>
+            <div class="dropdown-content">
+                <a href="../cargo-jeans.html">Cargo Jeans</a>
+            </div>
+        </div>
+        <a href="../sale.html">SALE</a>
+    </div>  
+    <div class = "quiz-container">
+        <div class = "wrapper">
+            <div class = "quiz-head">
+                <h1 class = "quiz-title" id = "countdown"> 
+                    1:00
+                </h1>
+                <div class = "quiz-score flex">
+                    <span id = "correct-score"></span>/<span id = "total-question"></span>
+                </div>
+            </div>
+            <div class = "quiz-body">
+                <h2 class = "quiz-question" id = "question"><!--What is the full form of HTTP? --></h2>
+                <ul class = "quiz-options">
+                    <!-- <li>1. Hyper text transfer package</li>
+                    <li>2. Hyper text transfer protocol</li>
+                    <li>3. Hyphenation text test program</li>
+                    <li>4. None of the above</li> -->
+                </ul>
+                <div id = "result">
+                </div>
+            </div>
+            <div class = "quiz-foot">
+                <button type = "button" id = "check-answer">Check Answer</button>
+                <button type = "button" id = "play-again">Play Again!</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer class="site-footer">
+        <div class="footer-top">
+        <hr class="footer-divider" /> <!-- for the ---- to separate footer and main stuff -->
+        </div>
+        <div class="footer-content">
+        <div class="footer-section">
+            <h5>QUICK LINKS</h5>
+            <ul>
+            <li>FAQ</li>
+            <li>Track Order</li>
+            <li>Shipping</li>
+            <li>Returns</li>
+            <li>Sizing</li>
+            <li>Afterpay</li>
+            <li>Klarna</li>
+            <li>Shop Pay</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h5>MORE ABOUT US</h5>
+            <ul>
+            <li>Gift Cards</li>
+            <li>Rewards</li>
+            <li>Give & Recieve</li>
+            <li>Blogs</li>
+            <li>Promotions</li>
+            <li>Reviews</li>
+            <li>About Us</li>
+            <li>Careers</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h5>LOWER IMPACT</h5>
+            <ul>
+            <li>Our Mission</li>
+            <li>Ethical Sourcing</li>
+            <li>About Lower Impact</li>
+            <li>Sustainability & Environment</li>
+            <li>Equality & Community</li>
+            <li>Singapore's Act of Transparency</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h5>GET IN TOUCH</h5>
+            <ul>
+            <li>Contact Us</li>
+            <li>Collaborations</li>
+            <li>College Ambassador</li>
+            <li>Afiiliate Program</li>
+            <li>Retail Store</li>
+            <li>Accessibility</li>
+            <li>Cookies Settings</li>
+            </ul>
+        </div>              
+        <div class="footer-section download-app">
+            <h5>DOWNLOAD OUR APP</h5>
+            <div class="app-download">
+                <a href="#" class="app-store" onclick="toggleQRCode(event)">
+                <img src="../image/index/new_for_you/app1.jpg" alt="App Store"/>
+                <div class="qr-code" id="qrCode">
+                    <img src="../image/index/new_for_you/qrcode.jpg" alt="QR Code"/>
+                </div>
+                </a>
+            </div>                                                  
+        </div>
+        <div class="footer-section-sign-up">
+            <h5>SIGN UP FOR</h5>
+            <h6>Your mystery discount + the chance to win a $500 gift card</h6>
+            <form action="#">
+            <input type="text" placeholder="ENTER PHONE NUMBER">
+            </form>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+            <div class="footer-bottom-content">
+                <span class="country-notice">YOU'RE ON OUR SG STORE - CHANGE TO SGD HERE</span>
+                <div class="social-icons">
+                    <i class="fa fa-snapchat-ghost fa-2x social-icon" aria-hidden="true"></i>
+                    <i class="fa fa-facebook fa-2x social-icon" aria-hidden="true"></i>
+                    <i class="fa fa-instagram fa-2x social-icon" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square fa-2x social-icon" aria-hidden="true"></i>
+                    <i class="fa fa-pinterest fa-2x social-icon" aria-hidden="true"></i>
+                    <i class="fa fa-spotify fa-2x social-icon" aria-hidden="true"></i>                     
+                </div>
+                <div class="legal-links">
+                <p>AMELIAXWEIYING SG | TERMS OF SALE | TERMS OF USE  | PRIVACY POLICY  | SITEMAP</p> 
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Add this modal HTML structure at the end of your body tag -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+        <span class="modal-header">
+            <h3>GAME OVER</h3>
+            <div class = "modal-body" h6></div><br> <!--this is for the score-->
+        </span>
+        <button class="modal-close-btn" onclick="closeGameOverModal()">Close</button>
+        </div>
+    </div>
+  
+    <script src = "trivia-quiz.js"></script>
+    <script src="login-api.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
